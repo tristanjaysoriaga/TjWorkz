@@ -1,0 +1,284 @@
+@CA_colorBrown: #2A1712;
+@CA_colorGreen: #26380D;
+
+.setMenuImage(@setImage: "../images/menu1-300px.jpg", @setWidth, @setHeight)
+	{
+		background-image:url(@setImage);
+		width:@setWidth;
+		height:@setHeight;
+		float:left;
+	}	
+ 
+.setIconImage(@setImage: "../images/icon1.png", @setMarginLeft)
+	{
+		 margin-left:@setMarginLeft; 
+		 background-image:url(@setImage); 
+		 height:26px; 
+		 width:26px; 
+		 margin-right:5px; 
+		 cursor:pointer; 
+		 float:left;
+	}
+
+.rounded-corners (@radius: 20px) 
+	{
+  		-webkit-border-radius:@radius; 
+  		-moz-border-radius:@radius; 
+  		border-radius:@radius; 
+  		border:1px solid #CFCFCF;
+	}
+ 
+header { color:#FFF; }
+
+#logo { margin-left:30px; background-image:url(../images/logo.png); width:164px; height:166px; float:left;  }
+
+#topsection 
+{ 
+ 	background-color:@CA_colorBrown; height:166px;
+
+ 		ul { margin-right:20px; margin-top:120px; float:right; 
+
+ 	 		li { display:block; float:left;  
+
+				 a { color:#FFF; padding:5px 10px 5px 10px; text-decoration:none; }
+				   
+  				 a:hover { .rounded-corners; background-color:#F2F2E7; text-decoration:none; color:@CA_colorBrown; cursor:pointer; }
+				  
+			   } 
+		   }
+}
+
+#mainsection { margin:auto; text-align:justify; }
+
+#pic { background-image:url(../images/image-600px.jpg); width:600px; height:305px; float:left; }
+
+#picmsg 
+{
+	width:340px; height:305px; background-color:@CA_colorGreen; text-align:center; float:left; 
+
+	h4 { margin-top:100px; color:#FFF; }
+	
+}
+
+#menu1 { .setMenuImage("../images/menu1-300px.jpg", 300px, 142px); }
+
+#menu2 { .setMenuImage("../images/menu2-300px.jpg", 300px, 142px); }
+
+#menu3 { .setMenuImage("../images/menu3-300px.jpg", 300px, 142px); }
+
+.menubutton 
+{ 
+	height:25px; width:70px; background-color:@CA_colorGreen; text-align:center; float:right; 
+
+ 		a{ font-size:8px; color:#FFF; text-decoration:none; }
+		 
+ 		a:hover{ font-size:8px; color:#FFF; text-decoration:underline; cursor:pointer; } 
+			   
+}
+
+.menucaption { float:left; }
+
+#imgWelcome { width:205px; height:165px; background-image:url(../images/welcome-205px.jpg); margin-right:20px; float:left; }
+
+#msgWelcome { width:395px; float:left; }
+
+#bottomsection 
+{ 
+	background-color:@CA_colorBrown; height:230px; width:960px; margin-top:20px; 
+
+	address { font-size:12px; margin-top:15px; }
+
+	h5 { margin-top:20px; }
+
+	ul { margin-left:20px; 
+
+		li { font-size:12px; line-height:12px; 
+
+			a { font-size:12px; color:#FFF; text-decoration:none; }
+			  
+			a:hover { font-size:12px; color:#FFF; cursor:pointer; text-decoration:underline; } 
+						   
+		   } 
+	   }
+}
+
+#imgIcon1 { .setIconImage("../images/icon1.png", 0); }
+
+#imgIcon2 { .setIconImage("../images/icon2.png", 0); }
+
+#imgIcon3 { .setIconImage("../images/icon3.png", 0); }
+
+.bottomspacer { margin-top:20px; }
+
+footer 
+{ 
+	color:#FFF;
+
+	h5 { color:#FFF; }
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) 
+		{
+		
+			#logo { margin-left:30px; background-image:url(../images/logo.png); width:164px; height:166px; float:left;  }
+			
+			#topsection
+			{ 
+				ul { 
+					  li { 
+							a { color:#FFF; text-decoration:none; }
+							
+					   		a:hover { .rounded-corners; background-color:#F2F2E7; text-decoration:none; color:@CA_colorBrown; cursor:pointer; }
+							
+					     }
+				   }
+			}
+			
+			#pic{ background-image:url(../images/image-500px.jpg); width:503px; height:256px; float:left; }
+			
+			#picmsg
+			{ 
+				width:245px; height:256px; background-color:@CA_colorGreen; float:left;
+				
+				h4 { margin-top:60px; color:#FFF; }
+			}
+			
+			#menu1 { .setMenuImage("../images/menu1-235px.jpg", 235px, 111px); }
+			
+			#menu2 { .setMenuImage("../images/menu2-235px.jpg", 235px, 111px); }
+			
+			#menu3 { .setMenuImage("../images/menu3-235px.jpg", 235px, 111px); }
+			
+			#msgWelcome { width:267px; float:left; }
+			
+			#bottomsection { background-color:@CA_colorBrown; height:230px; width:770px; }
+			
+		}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) 
+		{	
+		
+			#logo { background-image:url(../images/logo.png); width:164px; height:166px; float:left;  }
+			
+			#topsection
+			{
+				ul { margin-left:5px;  margin-top:12px; margin-right:0px; width:150px; height:138px; float:left;
+			
+					li { margin-right:10px; display:block; float:left; 
+			
+						  a { color:#FFF; text-decoration:none; }
+
+						  a:hover { .rounded-corners; background-color:#F2F2E7; text-decoration:none; color:@CA_colorBrown; cursor:pointer; }
+						  
+					   }
+				   }
+			}
+			
+			#pic { background-image:url(../images/image-420px.jpg); width:420px; height:214px; float:left; }
+			
+			#picmsg 
+			{ 
+				width:420px; height:150px; background-color:@CA_colorGreen; float:left; 
+			
+					h4 { margin-top:40px; color:#FFF; }
+			}
+			
+			#msgWelcome { width:420px; margin-top:20px; float:left; }
+			
+			#bottomsection 
+			{ 
+				background-color:@CA_colorBrown; height:700px; width:420px; 
+			
+				h5 { margin-left:30px; }
+			
+			    ul { margin-left:50px; }
+			
+				address { margin-left:30px; }
+			}
+			
+			#imgIcon1 { .setIconImage("../images/icon1.png", 30px); }
+
+			#imgIcon2 { .setIconImage("../images/icon2.png", 0); }
+			
+			#imgIcon3 { .setIconImage("../images/icon3.png", 0); }
+			
+		}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) 
+		{		
+		
+			#logo { margin:0; background-image:url(../images/logo.png); width:164px; height:166px; float:left;  }
+			
+			#topsection
+			{
+				ul { margin-left:5px;  margin-top:12px; margin-right:0px; width:130px; height:138px; float:left;
+			
+				   	li { 
+				   			a { color:#FFF; text-decoration:none; }
+
+							a:hover { .rounded-corners; background-color:#F2F2E7; text-decoration:none; color:@CA_colorBrown; cursor:pointer; }
+							
+					   }
+				   }
+			}
+			
+			#pic { background-image:url(../images/image-300px.jpg); width:300px; height:153px; float:left; }
+			 
+			#picmsg 
+			{ 
+				width:300px; height:120px; background-color:@CA_colorGreen; float:left; 
+				
+			 	h4 { margin-top:10px; color:#FFF; font-size:18px; }
+			} 
+			
+			#msgWelcome { width:300px;  margin-top:20px; float:left; }
+			 
+			#bottomsection 
+			{ 
+				background-color:@CA_colorBrown; height:700px; width:300px;  
+				
+				h5 { margin-left:60px; }
+			
+			 	ul { margin-left:80px; }
+			
+			 	address { margin-left:60px; }
+			}
+			
+			#imgIcon1 { .setIconImage("../images/icon1.png", 60px); }
+
+			#imgIcon2 { .setIconImage("../images/icon2.png", 0); }
+			
+			#imgIcon3 { .setIconImage("../images/icon3.png", 0); }
+			
+		}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
